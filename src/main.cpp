@@ -35,7 +35,7 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0x7d522b2a62fdb020377c72f67367e8603dc4f854cc8a4d10308d62dec2470ac5");
+uint256 hashGenesisBlock("0xf78baa8a6a72bb89e7facb833c78237d77afef786ea4948b72cce9347eb9c66d");
 static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Activacoin: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
@@ -2749,7 +2749,7 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xc1;
         pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0xdd;
-        hashGenesisBlock = uint256("0xfa85021d2dde61231184d2bde7b2f9420a9c800565516373e94038dbb0fc1633");
+        hashGenesisBlock = uint256("0x9e968985167e0f65e4c7c1f0b53e9346c6c4673636831a11375eecb7ed98a3dc");
     }
 
     //
@@ -2794,17 +2794,17 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1519727775;
+        block.nTime    = 1522041945;
         block.nBits    = 0x1e0ffff0;
-        block.nNonce   = 1040617;
+        block.nNonce   = 1655599;
 
         if (fTestNet)
         {
-            block.nTime    = 1519727792;
-            block.nNonce   = 1556256;
+            block.nTime    = 1522041958;
+            block.nNonce   = 5682657;
         }
 
-        if (false && block.GetHash() != hashGenesisBlock)
+        if (true && block.GetHash() != hashGenesisBlock)
         {
             printf("Searching for genesis block...\n");
             // This will figure out a valid hash and Nonce if you're
@@ -4847,4 +4847,3 @@ public:
         mapOrphanTransactions.clear();
     }
 } instance_of_cmaincleanup;
-
