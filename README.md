@@ -71,3 +71,6 @@ Unit tests for the GUI code are in `src/qt/test/`. To compile and run them:
     make -f Makefile.test
     ./activacoin-qt_test
 
+### Setup Activa Coin Node
+
+(Setup Activa Coin (ACV) Node)[https://github.com/aanwhs/aanwhs.github.io/wiki/Setup-Activa-Coin-(ACV)-Node] or (Setup Altcoin Node)[https://github.com/aanwhs/aanwhs.github.io/wiki/Setup-Altcoin-Node#others]
